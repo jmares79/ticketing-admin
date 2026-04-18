@@ -4,12 +4,16 @@ declare(strict_types=1);
 namespace App\Models;
 
 use App\Enums\TicketStatus;
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Illuminate\Database\Query\Builder;
+
 
 class Ticket extends Model
 {
+    use HasFactory;
+
     protected $fillable = ['subject', 'content', 'user_id', 'status'];
 
     protected $casts = [
