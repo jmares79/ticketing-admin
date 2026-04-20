@@ -12,7 +12,7 @@ class TicketController extends Controller
     {
         $tickets = Ticket::with('user')
             ->open()
-            ->oldest()
+            ->latest()
             ->paginate(config('pagination.per_page'));
 
         return TicketResource::collection($tickets);
