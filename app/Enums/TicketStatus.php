@@ -9,5 +9,6 @@ namespace App\Enums;
 enum TicketStatus: int
 {
     case Open   = 0;
-    case Closed = 1;
+    case InProgress = 1;
+    case Closed = 2;
 }
