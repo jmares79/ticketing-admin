@@ -9,11 +9,14 @@ use App\Models\User;
 use Illuminate\Database\Eloquent\Collection;
 use Lorisleiva\Actions\Concerns\AsAction;
 
+/**
+ * Creates a ticket to a random user. If the user pool is less than max users, it creates users
+ */
 class CreateTicketsAction
 {
     use AsAction;
 
-    public function handle()
+    public function handle(): Ticket
     {
         $users = $this->getUsers();
 

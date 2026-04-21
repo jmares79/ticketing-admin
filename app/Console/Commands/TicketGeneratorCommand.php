@@ -22,6 +22,7 @@ class TicketGeneratorCommand extends Command
 
         collect(range(1, $count))->each(function () {
             $ticket = CreateTicketsAction::run();
+
             $this->line("Created ticket -- {$ticket->id}: {$ticket->subject}");
         });
 

@@ -12,7 +12,7 @@ Build a production-grade backend system that:
 - Simulates a constant inflow of support tickets via a scheduled command
 - Processes tickets one at a time through a Laravel database queue, mimicking a real support agent workflow
 - Exposes a versioned REST API with paginated endpoints and a statistics summary
-- Is fully tested with Pest, targeting a minimum of 80% coverage
+- Is fully tested with Pest
 
 ---
 

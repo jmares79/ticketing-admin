@@ -1,7 +1,6 @@
 <?php
 declare(strict_types=1);
 
-use App\Enums\TicketStatus;
 use App\Models\Ticket;
 use App\Models\User;
 use App\Services\StatsService;

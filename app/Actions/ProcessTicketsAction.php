@@ -15,7 +15,7 @@ class ProcessTicketsAction
 {
     use AsAction;
 
-    public function handle(int $batch)
+    public function handle(int $batch): int
     {
         $tickets = Ticket::open()
             ->oldest()
