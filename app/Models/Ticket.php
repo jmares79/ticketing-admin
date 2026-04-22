@@ -9,7 +9,6 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-
 class Ticket extends Model
 {
     use HasFactory;
@@ -33,5 +32,10 @@ class Ticket extends Model
     public function scopeClosed(Builder $query): void
     {
         $query->where('status', TicketStatus::Closed);
+    }
+
+    public function scopeInProgress(Builder $query): void
+    {
+        $query->where('status', TicketStatus::InProgress);
     }
 }
