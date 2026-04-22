@@ -121,13 +121,29 @@ QUEUE_CONNECTION=sync
 Run tests:
 
 ```bash
-./vendor/bin/pest
+php artisan test
 ```
 
 Run one file:
 
 ```bash
 ./vendor/bin/pest tests/Feature/TicketControllerTest.php
+```
+
+> Note: Code coverage requires Xdebug installed and enabled. If some warnings are show about it during tests, 
+> comment out the `<coverage>` element lines in `phpunit.xml` file.
+
+In case you want a coverage report, these commands can help:
+
+```bash
+# Linux/Mac
+export XDEBUG_MODE=coverage && php artisan test
+
+# Windows (Command Prompt)
+set XDEBUG_MODE=coverage && php artisan test
+
+# Windows (PowerShell)
+$env:XDEBUG_MODE="coverage"; php artisan test
 ```
 
 ## API endpoints
