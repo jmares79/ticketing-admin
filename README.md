@@ -13,19 +13,19 @@ a `Ticket` model and commands to simulate generation and processing of tickets.
 
 ## Quick Setup
 
+> Note: The test statement required to submit a GIT bundle zipped, including all files from the project. Typically this
+> isn't the case, as a repo URL is passed for the project to be cloned.
+> In this specific case, the vendor folder is included, which shouldn't be submitted. For a fresh start, please delete it
+> and execute composer install.
+
+To install it, extract the zip folder into the desired location and then follow these steps::
+
 ```bash
-git clone <repository-url>
-cd ticketing-admin
+cd ticketing-admin (Or desired name)
 composer install
 cp .env.example .env
 php artisan key:generate
 php artisan migrate
-```
-
-Alternative bootstrap command:
-
-```bash
-composer run setup
 ```
 
 ## Environment Configuration
@@ -56,7 +56,7 @@ Notes:
 
 ## Running the Project
 
-1. Start the API server:
+1. Start the API server (or use another one by configuring it):
 
     ```bash
     php artisan serve
